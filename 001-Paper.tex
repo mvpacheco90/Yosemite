@@ -7,6 +7,7 @@
 \usepackage{color}
 \modulolinenumbers[5]
 \usepackage{mhchem}
+\usepackage{enumitem}
 
 \journal{Geomorphology}
 
@@ -106,8 +107,6 @@ Therefore, to study the Royal Arches Meadow Rock Avalanche and to gain insights 
 
 
 
-
-
 \section{Methods}
 
 Geophysical methods have been successfully applied to image mass wasting deposits  (e.g., Sass, 2006; Otto \& Sass, 2006; Socco et al., 2010; Brody et al. 2015, Liu \& Plattner 2018), allowing researchers to better estimate volume, image internal structures, and to track lateral continuity in depth. In addition, Doetsch, Linde, Pessognelli, Green, \& G\"unther, (2012), have demonstrated the effectiveness of using Ground Penetrating Radar (GPR) to constrain electrical resistivity tomography (ERT). Inspired by these works, we combined ERT and GPR surveys to image the subsurface of the Royal Arches Meadow rock avalanche. These geophysical methods are highly suited to the area of study because of the strong dielectric permittivity and electrical resistivity contrast between the rock avalanche and the underlying valley floor. We georeferenced the geophysical data using differential GPS measurements acquired with a Trimble Geo 7X GPS, and the elevation information was extracted from LiDAR data.
@@ -118,7 +117,7 @@ Geophysical methods have been successfully applied to image mass wasting deposit
 										
 Ground Penetrating Radar is a noninvasive geophysical technique that detects electrical discontinuities in the shallow subsurface (typically < 50 m) (Neal, 2004). The most common form of GPR measurements involves keeping a transmitter antenna and a receiver antenna at a fixed distance and moves them along a profile line on the surface to detect reflections from subsurface features (Jol, 2008). 
 
-Eight GPR profiles were collected with a Sensors \& Software PulseEKKO Pro (50 and 100 MHz) system (Figure~\ref{GPR profile 7}). Profiles G1, G2, G3, G5, G6, G7 and G8 were collected with the 50 MHz antenna, while profile G4 was collected with the 100 MHz antenna. Note that due to obstacles in the field (e.g., boulders and fallen trunks), some of the profiles curve and do not follow a straight path (parallel or perpendicular to the possible rock avalanche flow). The profiles were then processed using GPRPy (Plattner and Pacheco, 2019). Processing flow and corrections included: time zero correction, filter (DEWOW and mean trace removal), T-pow gain, velocity analysis (based on WARR data), and topographic correction. A more detailed discussion of the GPR processing steps for this project can be found in (Pacheco, 2019).
+Eight GPR profiles were collected with a Sensors \& Software PulseEKKO Pro (50 and 100 MHz) system (Figure~\ref{GPR profile 7}). Profiles G1, G2, G3, G5, G6, G7 and G8 were collected with the 50 MHz antenna, while profile G4 was collected with the 100 MHz antenna. Note that due to obstacles in the field (e.g., boulders and fallen trunks), some of the profiles curve and do not follow a straight path (parallel or perpendicular to the possible rock avalanche flow). The profiles were then processed using GPRPy (Plattner and Pacheco, 2019). Processing flow and corrections included: time zero correction, filter (DEWOW and mean trace removal), T-pow gain, velocity analysis (based on WARR data), and topographic correction. A more detailed discussion of the GPR processing steps for this project can be found in (Pacheco, 2019). We then used the processed profiles to track the lateral continuity of specific reflectors following the methodology proposed by Mitchum et al., (1977). 
 
 											\begin{figure*}[h]
 
@@ -139,9 +138,9 @@ the ERT data were inverted using BERT / GIMLi (Guenther \& Ruecker, (2017) and R
 	
 	\subsection{Constraining ERT with GPR}
 										
-GPR profiles G1, G2, G3, G4, G5 were collected following the same path of ERT profiles E1, E2, E3, E4, and E5. That allowed us to verify the reliability of the data collected, not only by comparing the respective profiles but also by combining them. Qualitatively, we compared each GPR profile with its respective ERT profile, and quantitatively, we used the GPR profiles as regularization to improve the ERT inversion, detailed information about this technique can be found at Doetsch et al., (2012).
+GPR profiles G1, G2, G3, G4, G5 were collected following the same path of ERT profiles E1, E2, E3, E4, and E5. this allowed us to verify the reliability of the data collected, not only by comparing the respective profiles but also by combining them. Qualitatively, we compared each GPR profile with its respective ERT profile, and quantitatively, we used the GPR profiles as regularization to improve the ERT inversion, detailed information about this technique can be found at Doetsch et al., (2012).
 
-\COMON do we wanna a paragraph here ilustrating an example how we did it with a figure?\COMOFF
+\COMON do we wanna a paragraph here illustrating an example how we did it with a figure?\COMOFF
 									
 									
 									
@@ -149,14 +148,22 @@ GPR profiles G1, G2, G3, G4, G5 were collected following the same path of ERT pr
 									
 \section{Results}
 										
-We processed and analyzed a total of eight GPR and five ERT profiles. We then used the GPR profiles to track continuous reflectors along and across profiles. Subsequently, those reflectors were used to constrain ERT inversions to investigate which of them represents the interface between the RAMRA and the paleo-valley.  
+Our results were obtained from the analysis of eight GPR and five ERT processed profiles. And from this data we were able to identify the interface between the bottom of the Royal Arches Meadow Rock Avalanche and the palleo-valley floor. We were also able to infer the extent of the avalanche deposit.  
+
+In order to identify the interface between the bottom of the rock avalanche depposit and paleo-valley floor using GPR and ERT, we had to look for:
+
+\begin{itemize}
+    \item In the GPR profiles: a continuous reflector in multiple directions in the hundreds of meters scale.
+    \item In the ERT profiles: a sharp contrast between high resistivity material (rock avalanche deposit) overlaying conductive material (paleo-valley floor sediments).
+\end{itemize}
 
 
-		\subsection GPR Results 
+
+		\subsection {GPR Results}
 										
 Since the rock avalanche studied here has a large surficial expression (hundreds of meters scale), we expect that its expression in the subsurface would be similar or even larger. Following this line of reasoning, we browsed the GPR profiles for continuous reflectors along and across profiles that could possibly represent the bottom of the rock avalanche. 
 
-We started the identification process at profiles G3,  G4, and G6 where the expression of four reflectors can be easily tracked along the profiles (Figure~\ref{Profiles_G3_G4_G6}). The similar elevation presented by those four reflectors is an indictive that they are continious not only along their profile but also accross profiles. And to verify the lateral continuity of those reflectors and their respective elevation, we ploted all the profiles in perspective and tracked the same four reflectors along and accros profiles (Figure~\ref{Profiles_G3_G6}).   
+We started the identification process at profiles G3,  G4, and G6 where the expression of four reflectors can be easily tracked along the profiles. The elevation of such reflectors are respectively similar among other profiles and we named them Kappa, Alpha, Beta and Gamma. (Figure~\ref{Profiles_G3_G4_G6}). 
 
 								 \begin{figure*}[h]
 
@@ -165,7 +172,7 @@ We started the identification process at profiles G3,  G4, and G6 where the expr
 
 								   \end{figure*}
 								   
-						   
+The similar elevation presented by those four reflectors is an indicative that they are continuous not only along their profile but also across profiles. And to verify the lateral continuity of those reflectors and their respective elevation, we plotted all the profiles in perspective and tracked the same four reflectors along and across profiles (Figure~\ref{Profiles_G3_G6}).						   
 								   
 								   \begin{figure*}[h]
 
@@ -174,11 +181,21 @@ We started the identification process at profiles G3,  G4, and G6 where the expr
 
 								   \end{figure*}
 	
-\COMON very final result = This procedure guided us to point Beta as the interface between the rock avalanche deposit and the underling valley sediments. Beta interface averages 1209m elevation with a variation of (more or less symbol) 3.2m, the uncertainty related to this elevation is of 0.5m.\COMOFF
+This approach confirmed the lateral continuity of those reflectors, and  a quantitatively analysis reveled their elevation information\COMON Table 1 \COMOFF
+	
 
+    \subsection {ERT Results}
+
+The four reflectors identified in the GPR profiles satisfy the premise of a "continuous reflector in multiple directions in the hundreds of meters scale" as bottom of the rock avalanche deposit. Therefore, to distinguish wihch of those reflectors is indeed the bottom of the rock avalanche we looked into the ERT inversion results contrained with GPR reflectors \COMON Figure ERT + Reflectors \COMOFF. It is expected that the boundary between the rock avalanche material and the paleo-valley floor would present a sharp contrast between resistive and conductive material (respectively). And reflector Beta, at elevation \COMON 1207.06m more or less 1.1  \COMOFF marks such transition. 
 
 										
 \section{Interpretation}
+
+    \subsection{Radarfaceis}
+
+
+    \subsection{Post Glacial Rate of Deposition?}
+    
 		
 										
 				
