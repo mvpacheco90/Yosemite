@@ -8,6 +8,7 @@
 \modulolinenumbers[5]
 \usepackage{mhchem}
 \usepackage{enumitem}
+%\usepackage{trackchanges}
 
 \journal{Geomorphology}
 
@@ -15,8 +16,27 @@
 \newcommand{\COMON}{\begin{color}{blue}}
 \newcommand{\COMOFF}{\end{color}}
 
+\newcommand{\alon}{\begin{color}{red}}
+\newcommand{\aloff}{\end{color}}
+
 %% APA style
 \bibliographystyle{model5-names}\biboptions{authoryear}
+
+\addeditor{Alain}
+
+%%%%%%%
+% The trackchanges package adds five new LaTeX commands:
+%
+%  \note[editor]{The note}
+%  \annote[editor]{Text to annotate}{The note}
+%  \add[editor]{Text to add}
+%  \remove[editor]{Text to remove}
+%  \change[editor]{Text to remove}{Text to add}
+%
+% complete documentation is here: http://trackchanges.sourceforge.net/
+%%%%%%%
+
+
 
 \begin{document}
 
@@ -44,7 +64,7 @@
 
 										\begin{abstract}
 										
-\COMON This is tjust a Test abstract!\COMOFF Since the retreat of the Last Glacial Maximum (~15,000 years ago), rockfalls have been the major force shaping Yosemite Valley, California. Rock avalanches are an especially large rockfall/rock slide that extends far beyond the cliff where they originate. These events are infrequent, but can reach hundreds of meters into the valley, and deposit an extremely large volume of debris when compared with regular rockfall events. Yosemite Valley is home of at least ten rock avalanche deposits, with the Royal Arches Meadow rock avalanche (RAMRA), situated in eastern Yosemite Valley, being the oldest event (~14,000 yr BP). Because this event occurred shortly after the Last Glacial Maximum (LGM), mapping the interface between this rock avalanche and the underlying valley sediments can give us insights about the valley elevation and overall geomorphic state of Yosemite Valley shortly after the LGM.  Holocene aggradation covers parts of the deposit, reducing its surface expression. This represents a challenge for estimating the dimensions of the deposit. To overcome this obstacle, we used a combination of geophysical methods (Electrical Resistivity Tomography (ERT) and Ground Penetrating Radar (GPR)) to image the interface between the RAMRA and underlying valley sediments. The strong dielectric permittivity and electrical resistivity contrast between the rock avalanche and the underlying sediments make both electrical resistivity tomography and ground penetrating radar ideal methods for our purpose. This then allowed us to infer that the surface of the valley underneath the Royal Arches Meadow Rock Avalanche is in average 1209m with a variation of +/- 3.2m.
+\COMON This is tjust a Test abstract!\COMOFF Since the retreat of the Last Glacial Maximum (~15,000 years ago), rockfalls have been the major force shaping Yosemite Valley, California. Rock avalanches are an especially large rockfall/rock slide that extends far beyond the cliff where they originate. These events are infrequent, but can reach hundreds of meters into the valley, and deposit an extremely large volume of debris when compared with regular rockfall events. Yosemite Valley is home of at least ten rock avalanche deposits, with the Royal Arches Meadow rock avalanche (RAMRA), situated in eastern Yosemite Valley, being the oldest event (~14,000 yr BP). Because this event occurred shortly after the Last Glacial Maximum (LGM), mapping the interface between this rock avalanche and the underlying valley sediments can give us insights into the valley elevation and overall geomorphic state of Yosemite Valley shortly after the LGM.  Holocene aggradation covers parts of the deposit, reducing its surface expression. This represents a challenge for estimating the dimensions of the deposit. To overcome this obstacle, we used a combination of geophysical methods (Electrical Resistivity Tomography (ERT) and Ground Penetrating Radar (GPR)) to image the interface between the RAMRA and underlying valley sediments. The strong dielectric permittivity and electrical resistivity contrast between the rock avalanche and the underlying sediments make both electrical resistivity tomography and ground penetrating radar ideal methods for our purpose. This then allowed us to infer that the surface of the valley underneath the Royal Arches Meadow Rock Avalanche is in average 1209m with a variation of +/- 3.2m.
 
 									\end{abstract}
 
@@ -66,7 +86,7 @@ Unlike Rockfall, which happen very frequently in the park and produce small volu
 
 While some of the rock avalanches and other mass wasting deposits in Yosemite Valley are well studied and mapped \COMON(e.g., Stock, Luco, et al., 2012;  Stock \& Uhrhammer, 2010; and Wieczorek, Morrissey, Iovine, \& Godt, 1998) \COMOFF, little is known about the Royal Arches Meadow Rock Avalanche (RAMRA). Cosmogenic \ce{^{10}Be} exposure ages demonstrate that the RAMRA happened \SI{14030 \pm 340}{yr\, B.P.} (G. Stock, personal communication). This makes this avalanche deposit the oldest dated rock avalanche in Yosemite Valley. More importantly, because the Royal Arches Meadow Rock Avalanche happened approximately at 14000 B.P., the interface between the bottom of the RAMRA and the underlying paleo-valley marks the elevation state of the valley shortly after the LGM \COMON(15,000 to 20,000 years ago)\COMOFF. 
 
-Therefore, mapping this interface can give us insights about paleo-elevation of Yosemite Valley shortly after the LGM, and better understand of the local rates of aggradation. In addition, mapping the extent of the rock avalanche may provide valuable information for future research related to the dynamics of those events, because the runout extent of an avalanche, along with its associated volume and slope, are typically used to understand the event kinematics, which can also improve risk assessment (e.g., Wieczorek et al., 1999; Guzzetti et al., 2003; Stock, Luco, et al., 2012).
+Therefore, mapping this interface can give us insights about paleo-elevation of Yosemite Valley shortly after the LGM, and better understand \alon (``better understand'' is very vague. It's not clear what better means. Also, what does ``understand'' mean...) \aloff of the local rates of aggradation. In addition, mapping the extent of the rock avalanche may provide valuable information for future research related to the dynamics of those events, because the runout extent of an avalanche, along with its associated volume and slope, are typically used to understand the event kinematics, which can also improve risk assessment (e.g., Wieczorek et al., 1999; Guzzetti et al., 2003; Stock, Luco, et al., 2012). \alon (We need to be careful not to promise something that we don't do in this paper. Future research should go into the discussion or conclusions section, not introduction.) \aloff
 
 
 
@@ -74,23 +94,25 @@ Therefore, mapping this interface can give us insights about paleo-elevation of 
 
 \section{Study Area}
 
-Yosemite Valley, located in Yosemite National Park -- CA (Figure~\ref{Study_Area}A), is a ~1  km deep glacially carved canyon in the Sierra Nevada, California, USA (Matthes, 1930; Huber et al., 1987), home to some of the largest granitic rock faces in the world. Yosemite Valley is the home of at least ten rock avalanche deposits, and in this research,  we investigated the oldest of them, the Royal Arches Meadow rock avalanche (RAMRA) (Figure~\ref{Study_Area}B), situated in eastern Yosemite Valley. 
+Yosemite Valley, located in Yosemite National Park -- CA (Figure~\ref{Study_Area}A), \alon (check how other papers in this journal cite figures. Is it with an abbreviation like ``Fig.''? Is there a space between ``Figure'' or ``Fig'' and the number? Some journal even have specific guidelines somewhere in a document on how to reference things)\aloff is a ~1  km deep glacially carved canyon in the Sierra Nevada, California, USA (Matthes, 1930; Huber et al., 1987). It is home to some of the largest granitic rock faces in the world \alon (need citation or remove)\aloff. Yosemite Valley is the home of at least ten rock avalanche deposits \alon(citation)\aloff. We investigated the oldest of them, the Royal Arches Meadow rock avalanche (RAMRA) (Figure~\ref{Study_Area}B), situated in eastern Yosemite Valley. \alon(It is extremely important that all the figure labels and numbers are easily legible. See for example Austin's paper for what)\aloff
 
 									\begin{figure*}[h]
 
 	\includegraphics[width=\textwidth]{Figures/Study_Area.pdf}
-		\caption{: (A) Map of view of Yosemite Valley - CA, red box highlights the study area (modified after Brody et al., (2015)). (B) oblique view of the study area. \label{Study_Area}}
+		\caption{: (A) Map of view of Yosemite Valley - CA, red box highlights the study area (modified after Brody et al., (2015)). (B) oblique view of the study area.  \label{Study_Area}}
 
 
 									\end{figure*}
 
-The proximal portion of the study area (NE), close to the talus deposits (yellow portion in (Figure~\ref{Study_Area}B) is marked by large boulders of several meters (Figure~\ref{Study_Area2} A and B). Moving towards the distal portion of the avalanche deposit (SW direction), we observed that the boulders decrease in size and surficial expression (from several meters to centimeters scale) (Figure~\ref{Study_Area2} C and D), until they completely disappear in the Southernmost portion close to the Tenaya Creek cut-bank (Figure 4 G).
+The proximal portion of the study area (NE) \alon(make sure that the figure clearly shows (with writing in the figure), which one is proximal, distral, etc)\aloff, close to the talus deposits (yellow portion in (Figure~\ref{Study_Area}B) is marked by large boulders of several meters (Figure~\ref{Study_Area2} A and B). Moving towards the distal portion of the avalanche deposit (SW direction), we observed that the boulders decrease in size and surficial expression (from several meters to centimeters scale) (Figure~\ref{Study_Area2} C and D), until they completely disappear in the Southernmost portion close to the Tenaya Creek cut-bank (Figure 4 G).
 
 \COMON
-	Talk about topography here
-	
-	Possibky topographic profiles?
+Talk about topography here
+
+Possibky topographic profiles?
 \COMOFF
+
+\alon (I would talk about topography after the LiDAR section) \aloff
 
 									\begin{figure*}[h]
 
@@ -101,9 +123,10 @@ The proximal portion of the study area (NE), close to the talus deposits (yellow
 			
 A common strategy deployed to study, and map rock avalanche deposits is the combination of LiDAR and other topographic tools along with field observations. These techniques allow researchers to investigate surficial morphological expressions, as well as volume, and runout of rock avalanche deposits. As example, Wieczorek \& J\"ager (1996) estimated the volume of mass wasting deposits in Yosemite Valley using  a Digital Elevation Models (DEM) of the present topography, and  another DEM representing the hypothetical datum of the flat valley level soon after filling of glacial lake Yosemite. 
 
-In other words, to precisely estimate the volume of mass wasting deposit you would need to identify the top and the bottom of the deposit. The top of the deposit can be inferred from the current topography. However, the bottom of the deposit cannot be inferred as the modern valley floor, given that Yosemite Valley has been aggrading since the LGM. This is why the second DEM is called hypothetical.
+In other words, to precisely estimate the volume of mass wasting deposit you would need to identify the top and the bottom of the deposit \alon(That's not true! You also need to know the location of the edges, which we couldn't find! Also, i wouldn't mention that we need to know the ``top'', as that is trivial.)\aloff. The top of the deposit can be inferred from the current topography. However, the bottom of the deposit cannot be inferred as the modern valley floor, given that Yosemite Valley has been aggrading since the LGM. This is why the second DEM is called hypothetical.
 
-Several evidences suggests that the valley has been aggrading since the LGM: (1)The morphological surficial expressions of older deposits such as the Royal Arches Meadow rock Avalanche (\SI{\approx14}{\kilo a}) and the Glacier Point Rock Fall deposit (\SI{9.6 \pm 1}{\kilo a}) (Cordes et al., 2013) are faded when compared to more recent rock avalanches deposits such as the El Captain Rock Avalanche (\SI{\approx3.6}{\kilo a}) (Stock \& Uhrhammer, 2010). In addition, the work of Cordes et al., (2013) demonstrated that the Valley beneath the glacier point (Figure~\ref{Study_Area}) has aggraded approximately 5m since the LGM.
+
+Several evidences suggests that the valley has been aggrading since the LGM: (1)The morphological surficial expressions of older deposits such as the Royal Arches Meadow rock Avalanche (\SI{\approx14}{\kilo a}) and the Glacier Point Rock Fall deposit (\SI{9.6 \pm 1}{\kilo a}) (Cordes et al., 2013) are faded when compared to more recent rock avalanches deposits such as the El Captain Rock Avalanche (\SI{\approx3.6}{\kilo a}) (Stock \& Uhrhammer, 2010). In addition, the work of Cordes et al., (2013) demonstrated that the Valley beneath the glacier point (Figure~\ref{Study_Area}) has aggraded approximately 5m since the LGM. \alon(should this entire paragraph go into introduction?)\aloff
 
 Therefore, to study the Royal Arches Meadow Rock Avalanche and to gain insights into the elevation of Yosemite Valley shortly after the LGM, we used a combination of geophysical methods to investigate the extent of the avalanche deposit and the interface between the bottom of the rock avalanche deposit and the paleo-valley e floo.
 
@@ -111,7 +134,7 @@ Therefore, to study the Royal Arches Meadow Rock Avalanche and to gain insights 
 
 \section{Methods}
 
-Geophysical methods have been successfully applied to image mass wasting deposits  (e.g., Sass, 2006; Otto \& Sass, 2006; Socco et al., 2010; Brody et al. 2015, Liu \& Plattner 2018), allowing researchers to better estimate volume, image internal structures, and to track lateral continuity in depth. In addition, Doetsch, Linde, Pessognelli, Green, \& G\"unther, (2012), have demonstrated the effectiveness of using Ground Penetrating Radar (GPR) to constrain electrical resistivity tomography (ERT). Inspired by these works, we combined ERT and GPR surveys to image the subsurface of the Royal Arches Meadow rock avalanche. These geophysical methods are highly suited to the area of study because of the strong dielectric permittivity and electrical resistivity contrast between the rock avalanche and the underlying valley floor. We georeferenced the geophysical data using differential GPS measurements acquired with a Trimble Geo 7X GPS, and the elevation information from LiDAR data.
+Geophysical methods have been successfully applied to image mass wasting deposits \alon(Start putting in references. Tge longer you wait, the more work it will be)\aloff (e.g., Sass, 2006; Otto \& Sass, 2006; Socco et al., 2010; Brody et al. 2015, Liu \& Plattner 2018), allowing researchers to better \alon(``better'' is vague. Either state precicely what the improvement is, or omit. Perhaps it was not possible beforehand? Or ambiguous).\aloff estimate volume, image internal structures, and to track lateral continuity in depth. In addition, Doetsch, Linde, Pessognelli, Green, \& G\"unther, (2012), have demonstrated the effectiveness of using Ground Penetrating Radar (GPR) to constrain electrical resistivity tomography (ERT). Inspired by their work, we combined ERT and GPR surveys to image the subsurface of the Royal Arches Meadow rock avalanche. These geophysical methods are highly suited to the area of study because of the strong dielectric permittivity and electrical resistivity contrast between the rock avalanche and the underlying valley floor. We georeferenced the geophysical data using differential GPS measurements acquired with a Trimble Geo 7X GPS, and the elevation information from LiDAR data.
 
 
 
