@@ -186,36 +186,44 @@ Results from the three samples are nearly identical (Table~\ref{age}), yielding 
   \begin{tabular*}{\textwidth}{ccccccc}
     \hline
     \addlinespace[0.1cm]
-    Sample & \makecell{Latitude \\ ($^\circ$N)} & \makecell{Longitude \\ ($^\circ$W) } & \makecell{Elevation \\ (m AMSL\tnote{1})} & \makecell{Sample \\  thickness (cm)}  & \multicolumn{2}{c}{\makecell{  \ce{^{10}Be} production rate\\ (\si{atoms \per g \per yr})}} \\
-    %\cline{6-7}
-    & &&&& Be spallation &  Mu spallation \\
+    Sample & \makecell{SUERC\tnote{1} \\ Sample ID} & \makecell{Latitude \\ ($^\circ$N)} & \makecell{Longitude \\ ($^\circ$W) } & \makecell{Elevation \\ (m AMSL\tnote{2})} & \makecell{Sample \\  thickness (cm)}  & \makecell{Shielding \\ factor\tnote{3}} \\
     \hline 
-    RAMRA-1 & 37.743351 & -119.56008 & 1224 & 2   & 9.1740 & 0.088505 \\
-    RAMRA-2 & 37.743725 & -119.56185 & 1220 & 3   & 8.9742 & 0.087371 \\
-    RAMRA-3 & 37.744736 & -119.56255 & 1222 & 2.2 & 9.0503 & 0.087376 \\
+    RAMRA-1 & b7146 & 37.743351 & -119.56008 & 1224 & 2   & 0.929307 \\
+    RAMRA-2 & b7147 & 37.743725 & -119.56185 & 1220 & 3   & 0.919873 \\
+    RAMRA-3 & b7149 & 37.744736 & -119.56255 & 1222 & 2.2 & 0.918220 \\
     \hline
   \end{tabular*}
   
   
   \vspace{0.5cm}
-  %\begin{tabular}{|c|c|c|c|c|c|c|}
-  \begin{tabular*}{\textwidth}{ccccccc}
+  %\begin{tabular}{|c|c|c|c|c|c|}
+  \begin{tabular*}{\textwidth}{cccccc}
     \hline
     \addlinespace[0.1cm]
-    Sample & \makecell{Shielding \\ factor} & \makecell{Mass  \\ ( quartz \si{g})} & \makecell{\ce{Be} carrier\\ (\si{g}) } & \makecell{\ce{^10Be}/\ce{^9Be}\\ ($\times $\num{e13})}& \makecell{\ce{^10Be} concentration \\  ($\times $\SI{e4}{atoms \per g \, \ce{SiO_2}}) } & \makecell{Exposure Age\tnote{2}\\  (\si{\kilo a})}\\
+    Sample & \makecell{Mass  \\ ( quartz \si{g})} & \makecell{\ce{Be} carrier\tnote{4}\\ (\si{g}) } & \makecell{\ce{^10Be}/\ce{^9Be}\\ ($\times $\num{e13})\tnote{5} }& \makecell{\ce{^10Be} concentration \\  (\SI{e4}{atoms \per g \, \ce{SiO_2}}) } & \makecell{Exposure Age\\  (\si{\kilo a})}\\
     \hline
-    RAMRA-1& 0.929307 & 16.122 & 0.4460 & \num{1.52 \pm 0.04} & \num{12.583 \pm 0.370} & \num{15.5 \pm 1.3} \\
-    RAMRA-2& 0.919873 & 17.168 & 0.4462 & \num{1.59 \pm 0.04} & \num{12.366 \pm 0.352} & \num{15.5 \pm 1.3} \\
-    RAMRA-3& 0.918220 & 17.999 & 0.4458 & \num{1.69 \pm 0.05} & \num{12.551 \pm 0.368} & \num{15.6 \pm 1.3} \\
+    RAMRA-1 & 16.122 & 0.4460 & \num{1.52 \pm 0.04} & \num{12.583 \pm 0.370} & \num{16.0 \pm 0.5} \\
+    RAMRA-2 & 17.168 & 0.4462 & \num{1.59 \pm 0.04} & \num{12.366 \pm 0.352} & \num{16.1 \pm 0.5} \\
+    RAMRA-3 & 17.999 & 0.4458 & \num{1.69 \pm 0.05} & \num{12.551 \pm 0.368} & \num{16.2 \pm 0.5} \\
     \hline
   \end{tabular*}
   
-  \vspace{0.2cm}
+  %\vspace{0.2cm}
   \begin{tablenotes}
+    \footnotesize
+  \item[]
+    \hspace*{-0.2cm}
+    Exposure ages calculated using the CRONUS web calculator, version~3 \citep[][\url{https://hess.ess.washington.edu}; version info -- wrapper: 3.0.2, get\_age: 3.0.2, muons: 1A, alpha = 1, validate: validate\_v2\_input.m - 3.0, const:3.0.4]{Balco+2008}, assuming a rock density of \SI{2.7}{g \per cm}, standard atmosphere, a boulder erosion rate of \SI{0.00065}{cm\per yr} \citep{wahrhaftig2019extent}, and using the default calibration data set, reference production rate of \SI{3.92 \pm 0.31}{at\per g \per yr SLHL}, and Lifton-Sato-Dunai (LSDn or Sa) scaling scheme \citep{lifton2014scaling,phillips2016cronus}.
   \item[1]
-  Metres Above Mean Sea Level. 
-  \item[2] 
-  Exposure ages calculated using the CRONUS web calculator, version 2.0 \citep{phillips2016cronus, marrero2016cosmogenic}, \url{http://cronus.cosmogenicnuclides.rocks/2.0}, assuming a rock density of \SI{2.7}{g \per cm}, standard atmosphere, a boulder erosion rate of \SI{0.00065}{cm\per yr} \citep{wahrhaftig2019extent}, and using the Lifton-Sato-Dunai scaling scheme \citep{lifton2014scaling}.
+    Scottish Universities Environmental Research Centre (SUERC) identification number.  
+  \item[2]
+    Meters Above Mean Sea Level.
+  \item[3]
+    Calculated using the CRONUS online topographic shielding calculator Version 1.
+  \item[4]
+    Carrier \ce{Be} concentration of \SI{449}{ppm}.
+  \item[5]
+    Normalized to NIST standard with assumed \ce{^{10}Be}/\ce{^{9}Be} value of \num{2.79e-11} \cite{Nishiizumi+2007}, and including \SI{\approx 2}{\%} background correction using blank sample CFG1313 (b7157) with background and sample uncertainties propagated in quadrature. All uncertainties are~$1\sigma$. 
   \end{tablenotes}
 \end{threeparttable}
 \end{table*}
